@@ -2,7 +2,6 @@
 #!/usr/bin/env python
 __author__ = 'Blaka'
 
-
 # simplified version of sending help() output to a file
 import sys
 import os
@@ -16,9 +15,9 @@ import pydoc
 # change into the desired working path
 plat = platform.uname()
 if plat[1] == "MacBookPro":
-	macbook = os.chdir("/Users/blaka/Documents/python/liblist/temp")
+	os.chdir("/Users/blaka/Documents/python/liblist/temp")
 elif plat[1] == "MacMini":
-	macmini =os.chdir("/Users/blaka7/Documents/python/liblist/temp")
+	os.chdir("/Users/blaka7/Documents/python/liblist/temp")
 else:
 	print "this version is only for " + __author__
 make_file = "help_modules.txt"  # inital output file for the module list
@@ -41,6 +40,7 @@ def printing(): # just for cosmetics
 		pbar.finish()
 		print
 
+
 def printing_output():
 		pbar2 = ProgressBar(widgets=widgets2, maxval=100)
 		pbar2.start()
@@ -61,6 +61,7 @@ def printing_output():
 	sys.stdout = sys.__stdout__
 	os.system("clear")'''
 
+
 def create_output(): # saves the output of help('modules') to text file
 	# save present stdout
 	out = sys.stdout
@@ -73,7 +74,6 @@ def create_output(): # saves the output of help('modules') to text file
 	# reset stdout
 	sys.stdout = out
 	os.system("clear")
-
 
 
 def create_handle(): # creates a handle to work with the contents of the file
@@ -107,6 +107,7 @@ def delete_unused():
 		print "couldn't find file"
 	sort_list()
 
+
 def sort_list(): # sorts the list into alphabetical order
 	sort_in = open("lib_modules.txt", 'r')
 	sort_out = open("mod_list.txt",'w')
@@ -125,7 +126,6 @@ def sort_list(): # sorts the list into alphabetical order
 			continue
 		else:
 			sort_out.write(word + "\n")
-
 
 	sort_in.close()
 	sort_out.close() # housekeeping

@@ -1,5 +1,5 @@
-#!/usr/bin/env python -W ignore::DeprecationWarning
-# !/usr/bin/env python
+#! /usr/bin/env python -W ignore::DeprecationWarning
+#! /usr/bin/env python
 __author__ = "Blaka"
 
 import importlib
@@ -19,13 +19,6 @@ import platform
 		implement argv later so can use with command line for ease
 		implement so can use name or number
 '''
-'''
-dictionary = {1:"hello", 2: "blaka"}
-
-for func in dir(dictionary):
-	print func
-'''
-# use this ^^^^ as inspiration for expanding the modules functions
 
 
 ui = threading.Thread(target=nl.printing)

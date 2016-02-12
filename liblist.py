@@ -1,5 +1,5 @@
-#!/usr/bin/env python
-#!/usr/bin/env python -W ignore::DeprecationWarning
+#! /usr/bin/env python
+#! /usr/bin/env python -W ignore::DeprecationWarning
 # -*- coding: utf-8 -*-
 __author__ = "Blaka7"
 
@@ -17,7 +17,6 @@ import argparse
 import warnings
 
 
-
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
@@ -30,7 +29,6 @@ args = parser.parse_args()
 ui = threading.Thread(target=nl.printing)
 ui2 = threading.Thread(target=nl.printing_output)
 # sc = threading.Thread(target=nl.start_create)
-
 
 
 # open the newly created module list
@@ -52,8 +50,6 @@ num_list_p2 = []  # and the other half in here for other half of table
 path_list_p1 = []
 path_list_p2 = []  # same goes for the numbers that associate with them
 path_len = len(path_mod)  # count the number of modules
-
-
 
 
 def table_sort():
@@ -118,6 +114,7 @@ def library_list():
 		check_word()
 	else:
 		print "not valid choice"
+
 
 def check_dict_1():
 		try:
@@ -209,8 +206,6 @@ def print_output():
 		print "** __docs__ is unavailable with this package **"
 		print "\t"
 		sleep(3)
-
-
 
 if __name__ == "__main__":
 	repeat = ''  # holder for the user input

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88f59008-be75-4e42-b6aa-1b2d8f34b284" name="Default" comment="" />
+    <list default="true" id="88f59008-be75-4e42-b6aa-1b2d8f34b284" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liblist.py" afterPath="$PROJECT_DIR$/liblist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/liblist_newlist.py" afterPath="$PROJECT_DIR$/liblist_newlist.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/num_version_tester.py" afterPath="$PROJECT_DIR$/tests/num_version_tester.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/num_version_tester_test.py" afterPath="$PROJECT_DIR$/tests/num_version_tester_test.py" />
+    </list>
     <ignored path="liblist.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,10 +31,10 @@
           <file leaf-file-name="liblist_newlist.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/liblist_newlist.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6964892">
-                  <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+                <state vertical-scroll-proportion="0.7134768">
+                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
                   <folding>
-                    <element signature="e#153#163#0" expanded="true" />
+                    <element signature="e#152#162#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -42,10 +47,10 @@
           <file leaf-file-name="liblist.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/liblist.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.9026047">
-                  <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+                <state vertical-scroll-proportion="0.033975083">
+                  <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
                   <folding>
-                    <element signature="e#121#137#0" expanded="true" />
+                    <element signature="e#123#139#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -62,6 +67,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -69,12 +77,12 @@
         <option value="$PROJECT_DIR$/tests/list_test.py" />
         <option value="$PROJECT_DIR$/tests/list_class.py" />
         <option value="$PROJECT_DIR$/liblist_num_version.py" />
-        <option value="$PROJECT_DIR$/tests/num_version_tester_test.py" />
         <option value="$PROJECT_DIR$/num_list_newlist.py" />
-        <option value="$PROJECT_DIR$/tests/num_version_tester.py" />
         <option value="$PROJECT_DIR$/tests/liblist.py" />
         <option value="$PROJECT_DIR$/liblist_newlist.py" />
         <option value="$PROJECT_DIR$/liblist.py" />
+        <option value="$PROJECT_DIR$/tests/num_version_tester_test.py" />
+        <option value="$PROJECT_DIR$/tests/num_version_tester.py" />
       </list>
     </option>
   </component>
@@ -94,7 +102,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -107,7 +115,44 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes />
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liblist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liblist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liblist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liblist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="liblist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -390,7 +435,7 @@
     <frame x="0" y="23" width="1920" height="1001" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13322802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13322802" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -428,7 +473,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -438,7 +483,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -448,7 +493,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -458,7 +503,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -468,7 +513,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -478,7 +523,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -488,7 +533,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -498,7 +543,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -508,7 +553,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -518,7 +563,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -528,7 +573,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -538,7 +583,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -548,7 +593,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -558,7 +603,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -568,7 +613,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -578,7 +623,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="42" selection-start-line="32" selection-start-column="42" selection-end-line="32" selection-end-column="42" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -588,7 +633,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -761,20 +806,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/num_version_tester_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.197615">
-          <caret line="101" column="0" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/num_version_tester.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09966025">
-          <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/list_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.66251415">
@@ -817,22 +848,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liblist_newlist.py">
+    <entry file="file://$PROJECT_DIR$/liblist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6964892">
-          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
+        <state vertical-scroll-proportion="0.033975083">
+          <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
           <folding>
-            <element signature="e#153#163#0" expanded="true" />
+            <element signature="e#123#139#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/liblist.py">
+    <entry file="file://$PROJECT_DIR$/tests/num_version_tester.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9026047">
-          <caret line="112" column="4" selection-start-line="112" selection-start-column="4" selection-end-line="112" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.06795017">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
-            <element signature="e#121#137#0" expanded="true" />
+            <element signature="e#97#113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/num_version_tester_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.016987542">
+          <caret line="1" column="3" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/liblist_newlist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7134768">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="e#152#162#0" expanded="true" />
           </folding>
         </state>
       </provider>
