@@ -173,8 +173,8 @@ dpkt
 dumbdbm
 dummy_thread
 dummy_threading
-dumppdf
 easy_install
+ebooklib
 ecdsa
 elftools
 email
@@ -235,7 +235,6 @@ itertools
 jdcal
 json
 keyword
-latin2ascii
 lib2to3
 liblist
 liblist_newlist
@@ -263,7 +262,6 @@ mhlib
 mimetools
 mimetypes
 mimify
-miniterm
 mmap
 modulefinder
 modulegraph
@@ -292,18 +290,11 @@ paramiko
 parser
 passlib
 pcapy
-pcapytests
 pdb
-pdf2txt
 pdfminer
 pexpect
 pickle
 pickletools
-pilconvert
-pildriver
-pilfile
-pilfont
-pilprint
 pimp
 pip
 pipes
@@ -311,6 +302,7 @@ pkg_resources
 pkgutil
 platform
 plistlib
+plugins
 popen2
 poplib
 posix
@@ -349,7 +341,6 @@ queuelib
 quopri
 random
 re
-readelf
 readline
 repr
 requests
@@ -379,11 +370,9 @@ signal
 site
 six
 smtpd
-smtpd2
 smtplib
 sndhdr
 socket
-spoof-mac
 spoofmac
 spotify
 sqlite3
@@ -461,7 +450,6 @@ wave
 weakref
 web
 webbrowser
-wepper
 wget
 whichdb
 wsgiref
