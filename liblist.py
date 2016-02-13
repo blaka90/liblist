@@ -5,7 +5,8 @@ __author__ = "Blaka7"
 
 import importlib
 import __builtin__
-import os, sys
+import os
+import sys
 from prettytable import PrettyTable
 from time import sleep
 import liblist_newlist as nl
