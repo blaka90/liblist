@@ -1,7 +1,7 @@
-#! /usr/bin/env python
 #! /usr/bin/env python -W ignore::DeprecationWarning
 # -*- coding: utf-8 -*-
-__author__ = "Blaka7"
+
+__author__ = "Blaka90"
 
 import importlib
 import __builtin__
@@ -15,6 +15,10 @@ import platform
 import inspect
 import argparse
 import warnings
+import getpass
+
+
+"""-----------------ONLY WORKING ON UNIX SO FAR----------------"""
 
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -24,26 +28,40 @@ parser = argparse.ArgumentParser(description="Module for listing all modules ava
 parser.add_argument("q", nargs="?", help="uses pre-existing library list for quickness", default="empty")
 args = parser.parse_args()
 
-# below was the old way, been optimized since, just keeping incase(nevermind)
 
+# below was the old way, been optimized since, just keeping incase
 ui = threading.Thread(target=nl.printing)
 ui2 = threading.Thread(target=nl.printing_output)
 # sc = threading.Thread(target=nl.start_create)
 
 
-# open the newly created module list
 platform = platform.uname()
+user = getpass.getuser()
+
+# just the old way, will remove when i know new way is reliable on all systems
+'''
+# open the newly created module list
 global path_mod
 if platform[1] == "MacBookPro":
-	macbook = open("/Users/blaka/Documents/python/liblist/temp/mod_list.txt", "r")
+	macbook = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
 	path_mod = macbook.readlines()
 	macbook.close()  # just some housekeeping
 elif platform[1] == "MacMini":
-	macmini = open("/Users/blaka7/Documents/python/liblist/temp/mod_list.txt", "r")
+	macmini = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
 	path_mod = macmini.readlines()
 	macmini.close()  # just some housekeeping
 else:
 	print "this version is only for " + __author__
+'''
+
+# added since i am trying to make more universal
+try:
+	user_path = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
+except IOError as e:
+	user_path = open("/Users/" + user + "/mod_list.txt", "r")
+path_mod = user_path.readlines()
+user_path.close()
+
 
 num_list_p1 = []  # put half into here
 num_list_p2 = []  # and the other half in here for other half of table

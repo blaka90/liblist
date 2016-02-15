@@ -1,6 +1,7 @@
 #!/usr/bin/env python -W ignore::DeprecationWarning
-#!/usr/bin/env python
-__author__ = 'Blaka'
+# -*- coding: utf-8 -*-
+
+__author__ = 'Blaka90'
 
 # simplified version of sending help() output to a file
 import sys
@@ -10,32 +11,52 @@ from progressbar import *
 import platform
 import threading
 import pydoc
+import getpass
+
+
+"""-----------------ONLY WORKING ON UNIX SO FAR----------------"""
 
 
 # change into the desired working path
 plat = platform.uname()
+user = getpass.getuser()
+
+
+# just the old way, will remove when i know new way is reliable on all systems
+'''
 if plat[1] == "MacBookPro":
-	os.chdir("/Users/blaka/Documents/python/liblist/temp")
+	os.chdir("/Users/" + user + "/Documents/python/liblist/temp")
 elif plat[1] == "MacMini":
-	os.chdir("/Users/blaka7/Documents/python/liblist/temp")
+	os.chdir("/Users/" + user + "/Documents/python/liblist/temp")
 else:
 	print "this version is only for " + __author__
-make_file = "help_modules.txt"  # inital output file for the module list
+'''
 
-widgets = ['Preparing files: ', Percentage(), ' ', Bar(marker='0',left='[',right=']'),
-		   ' ', ' ', SimpleProgress()] #see docs for other options
+# added since i am trying to make more universal
+if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
+	os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")
+else:
+	os.chdir("/Users/" + user + "/")
 
-widgets2 = ['Creating Output: ', Percentage(), ' ', Bar(marker='0',left='[',right=']'),
-		   ' ', ' ', SimpleProgress()] #see docs for other options
+
+make_file = "help_modules.txt"  # initial output file for the module list
 
 
-def printing(): # just for cosmetics
+# actually slows down the program but just wanted some visual appeal
+widgets = ['Preparing files: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
+		' ', ' ', SimpleProgress()]  # see docs for other options
+
+widgets2 = ['Creating Output: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
+		' ', ' ', SimpleProgress()]  # see docs for other options
+
+
+def printing():  # just for cosmetics
 		print "...creating library list..."
 		pbar = ProgressBar(widgets=widgets, maxval=100)
 		pbar.start()
 
-		for i in range(0,100+1,10): # here do something long at each iteration
-			pbar.update(i) #this adds a little symbol at each iteration
+		for i in range(0, 100+1, 10):  # here do something long at each iteration
+			pbar.update(i)  # this adds the progress at each iteration
 			sleep(1)
 		pbar.finish()
 		print
@@ -45,8 +66,8 @@ def printing_output():
 		pbar2 = ProgressBar(widgets=widgets2, maxval=100)
 		pbar2.start()
 
-		for i in range(0,100+1,10): # here do something long at each iteration
-			pbar2.update(i) #this adds a little symbol at each iteration
+		for i in range(0, 100+1, 10):  # here do something long at each iteration
+			pbar2.update(i)  # this adds the progress at each iteration
 			sleep(1)
 		pbar2.finish()
 		print
@@ -62,7 +83,7 @@ def printing_output():
 	os.system("clear")'''
 
 
-def create_output(): # saves the output of help('modules') to text file
+def create_output():  # saves the output of help('modules') to text file
 	# save present stdout
 	out = sys.stdout
 	# set stdout to file handle
@@ -76,7 +97,7 @@ def create_output(): # saves the output of help('modules') to text file
 	os.system("clear")
 
 
-def create_handle(): # creates a handle to work with the contents of the file
+def create_handle():  # creates a handle to work with the contents of the file
 	try:
 		the_file = open("help_modules.txt", 'r')
 		global handle
@@ -108,9 +129,9 @@ def delete_unused():
 	sort_list()
 
 
-def sort_list(): # sorts the list into alphabetical order
+def sort_list():  # sorts the list into alphabetical order
 	sort_in = open("lib_modules.txt", 'r')
-	sort_out = open("mod_list.txt",'w')
+	sort_out = open("mod_list.txt", 'w')
 
 	results = []
 	sortfile = sort_in.readlines()
@@ -121,14 +142,14 @@ def sort_list(): # sorts the list into alphabetical order
 
 	results.sort()
 
-	for word in results: # removes all private modules
+	for word in results:  # removes all private modules
 		if word.startswith("_"):
 			continue
 		else:
 			sort_out.write(word + "\n")
 
 	sort_in.close()
-	sort_out.close() # housekeeping
+	sort_out.close()  # housekeeping
 
 
 def start_create():
