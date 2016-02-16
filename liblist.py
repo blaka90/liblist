@@ -240,6 +240,9 @@ if __name__ == "__main__":
 			sys.exit(0)
 	elif args.q == "empty":
 		nl.start_create()
+		print "-_-" * 26
+		print " " * 35 + "LIBLIST"
+		print "_-_" * 26 + "\n"
 		ui.start()
 		# sc.start()
 		ui.join()
