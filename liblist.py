@@ -59,7 +59,7 @@ else:
 try:
 	user_path = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
 except IOError as e:
-	user_path = open("/Users/" + user + "/mod_list.txt", "r")
+	user_path = open(os.environ['HOME'] + "/mod_list.txt", "r")
 path_mod = user_path.readlines()
 user_path.close()
 

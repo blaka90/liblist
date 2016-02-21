@@ -36,7 +36,7 @@ else:
 if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
 	os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")
 else:
-	os.chdir("/Users/" + user + "/")
+	os.chdir(os.environ['HOME'])
 
 
 make_file = "help_modules.txt"  # initial output file for the module list
