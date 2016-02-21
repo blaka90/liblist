@@ -226,7 +226,7 @@ def print_output():
 		print "\t"
 		sleep(3)
 
-if __name__ == "__main__":
+def main():
 	repeat = ''  # holder for the user input
 	if args.q == "q":
 		table_sort()
@@ -260,3 +260,6 @@ if __name__ == "__main__":
 			sys.exit(0)
 	else:
 		parser.print_help()
+
+if __name__ == "__main__":
+	main()
