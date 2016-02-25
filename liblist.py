@@ -19,14 +19,21 @@ import warnings
 import getpass
 
 
-"""-----------------ONLY WORKING ON UNIX SO FAR----------------"""
+"""-----------------ONLY WORKING ON MAC OS X SO FAR----------------"""
+
+
+'''
+	tested on linux and got error- test on linux and windows for correct paths
+	start making compatible with python3.5 as joining the dark side
+	look for cleaner solution for mod_dict_p1 & 2
+'''
 
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 parser = argparse.ArgumentParser(description="Module for listing all modules available")
-parser.add_argument("q", nargs="?", help="uses pre-existing library list for quickness", default="empty")
+parser.add_argument("-q", nargs="?", help="uses pre-existing library list for quickness", default="empty")
 args = parser.parse_args()
 
 
@@ -39,21 +46,6 @@ ui2 = threading.Thread(target=nl.printing_output)
 platform = platform.uname()
 user = getpass.getuser()
 
-# just the old way, will remove when i know new way is reliable on all systems
-'''
-# open the newly created module list
-global path_mod
-if platform[1] == "MacBookPro":
-	macbook = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
-	path_mod = macbook.readlines()
-	macbook.close()  # just some housekeeping
-elif platform[1] == "MacMini":
-	macmini = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
-	path_mod = macmini.readlines()
-	macmini.close()  # just some housekeeping
-else:
-	print "this version is only for " + __author__
-'''
 
 # added since i am trying to make more universal
 try:
@@ -226,9 +218,10 @@ def print_output():
 		print "\t"
 		sleep(3)
 
+
 def main():
 	repeat = ''  # holder for the user input
-	if args.q == "q":
+	if args.q == "q":  # --to tired to test now but try != "empty instead", changed arg q >> -q line 36--
 		table_sort()
 		while repeat != "n":
 			library_list()
