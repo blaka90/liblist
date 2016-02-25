@@ -14,7 +14,13 @@ import pydoc
 import getpass
 
 
-"""-----------------ONLY WORKING ON UNIX SO FAR----------------"""
+"""-----------------ONLY WORKING ON MAC OS X SO FAR----------------"""
+
+'''
+	tested on linux and got error- test on linux and windows for correct paths
+	start making compatible with python3.5 as joining the dark side
+	may need to look at create_output() see if works on windows
+'''
 
 
 # change into the desired working path
@@ -22,20 +28,10 @@ plat = platform.uname()
 user = getpass.getuser()
 
 
-# just the old way, will remove when i know new way is reliable on all systems
-'''
-if plat[1] == "MacBookPro":
-	os.chdir("/Users/" + user + "/Documents/python/liblist/temp")
-elif plat[1] == "MacMini":
-	os.chdir("/Users/" + user + "/Documents/python/liblist/temp")
-else:
-	print "this version is only for " + __author__
-'''
-
 # added since i am trying to make more universal
 if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
-	os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")
-else:
+	os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")  # just because its my script and
+else:																# that's where it lives on my machine
 	os.chdir(os.environ['HOME'])
 
 
@@ -44,10 +40,10 @@ make_file = "help_modules.txt"  # initial output file for the module list
 
 # actually slows down the program but just wanted some visual appeal
 widgets = ['Preparing files: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
-		' ', ' ', SimpleProgress()]  # see docs for other options
+			' ', ' ', SimpleProgress()]  # see docs for other options
 
 widgets2 = ['Creating Output: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
-		' ', ' ', SimpleProgress()]  # see docs for other options
+			' ', ' ', SimpleProgress()]  # see docs for other options
 
 
 def printing():  # just for cosmetics
