@@ -33,7 +33,7 @@ warnings.filterwarnings("ignore", category=DeprecationWarning)
 
 
 parser = argparse.ArgumentParser(description="Module for listing all modules available")
-parser.add_argument("-q", nargs="?", help="uses pre-existing library list for quickness", default="empty")
+parser.add_argument("q", nargs="?", help="uses pre-existing library list for quickness", default="empty")
 args = parser.parse_args()
 
 
@@ -221,7 +221,7 @@ def print_output():
 
 def main():
 	repeat = ''  # holder for the user input
-	if args.q == "q":  # --to tired to test now but try != "empty instead", changed arg q >> -q line 36--
+	if args.q == "q":
 		table_sort()
 		while repeat != "n":
 			library_list()
@@ -237,10 +237,8 @@ def main():
 		print " " * 35 + "LIBLIST"
 		print "_-_" * 26 + "\n"
 		ui.start()
-		# sc.start()
 		ui.join()
 		ui2.start()
-		# sc.join()
 		ui2.join()
 		table_sort()
 		while repeat != "n":
