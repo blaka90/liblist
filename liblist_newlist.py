@@ -20,6 +20,8 @@ import getpass
 	tested on linux and got error- test on linux and windows for correct paths
 	start making compatible with python3.5 as joining the dark side
 	may need to look at create_output() see if works on windows
+
+	find where temp||tmp is on each system and store the modlists there(should have read/write on any)
 '''
 
 
