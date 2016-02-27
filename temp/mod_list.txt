@@ -147,6 +147,8 @@ colorsys
 commands
 compileall
 compiler
+configobj
+configparser
 contextlib
 cookielib
 copy
@@ -158,6 +160,7 @@ csv
 ctypes
 curses
 cythonmagic
+daemon
 datetime
 dbhash
 dbm
@@ -169,6 +172,7 @@ distutils
 dnet
 docopt
 doctest
+docutils
 dpkt
 dumbdbm
 dummy_thread
@@ -181,7 +185,6 @@ email
 encodings
 ensurepip
 enum
-epub
 errno
 et_xmfile
 exceptions
@@ -241,6 +244,7 @@ liblist_newlist
 libnmap
 linecache
 locale
+lockfile
 logging
 lxml
 macerrors
@@ -278,6 +282,7 @@ nose
 ntpath
 nturl2path
 numbers
+numpy
 objc
 opcode
 openpyxl
@@ -289,15 +294,14 @@ parallelmagic
 paramiko
 parser
 passlib
-pcapy
 pdb
-pdfminer
 pexpect
 pickle
 pickletools
 pimp
 pip
 pipes
+piptools
 pkg_resources
 pkgutil
 platform
@@ -374,7 +378,6 @@ smtplib
 sndhdr
 socket
 spoofmac
-spotify
 sqlite3
 sre
 sre_compile
@@ -439,6 +442,7 @@ urlparse
 user
 uu
 uuid
+validate
 vboxapi
 vboxshell
 videoreader
@@ -451,8 +455,10 @@ weakref
 web
 webbrowser
 wget
+wheel
 whichdb
 wsgiref
+wxAnyThread
 xdrlib
 xml
 xmllib
