@@ -159,9 +159,11 @@ cssselect
 csv
 ctypes
 curses
+cycler
 cythonmagic
 daemon
 datetime
+dateutil
 dbhash
 dbm
 decimal
@@ -260,6 +262,7 @@ markupbase
 markupsafe
 marshal
 math
+matplotlib
 md5
 mechanize
 mhlib
@@ -294,6 +297,7 @@ parallelmagic
 paramiko
 parser
 passlib
+pcapy
 pdb
 pexpect
 pickle
@@ -337,7 +341,9 @@ pyexpat
 pygame
 pygeoip
 pyglet
+pylab
 pymsgbox
+pyparsing
 pyscreeze
 pytweening
 pytz
