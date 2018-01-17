@@ -4,20 +4,13 @@
 __author__ = 'Blaka90'
 
 # simplified version of sending help() output to a file
-import sys
-import os
 from time import sleep
 from progressbar import *
 import platform
-import threading
 import pydoc
 import getpass
 
-
-"""-----------------ONLY WORKING ON MAC OS X SO FAR----------------"""
-
 '''
-	tested on linux and got error- test on linux and windows for correct paths
 	start making compatible with python3.5 as joining the dark side
 	may need to look at create_output() see if works on windows
 
@@ -28,13 +21,21 @@ import getpass
 # change into the desired working path
 plat = platform.uname()
 user = getpass.getuser()
+os_sys = sys.platform
 
 
 # added since i am trying to make more universal
-if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
-	os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")  # just because its my script and
-else:																# that's where it lives on my machine
-	os.chdir(os.environ['HOME'])
+if "darwin" in os_sys:
+	if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):# just because its my script
+		os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")  # and that's where it lives on my machine
+elif "linux" in os_sys:
+	# delete this if statement if files do not exit yet or it will fail here(any point in having it anyway?)
+	if os.path.isfile("/home/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
+		os.chdir("/home/" + user + "/Documents/python/liblist/temp/")
+else:
+	print "Wrong directory or your operating system is not compatible..."
+	sleep(2)
+	sys.exit(10)
 
 
 make_file = "help_modules.txt"  # initial output file for the module list
@@ -85,10 +86,10 @@ def create_output():  # saves the output of help('modules') to text file
 	# save present stdout
 	out = sys.stdout
 	# set stdout to file handle
-	sys.stdout = open(make_file, "w")
+	sys.stdout = open(make_file, "w+")
 	# run your help code
 	# its console output goes to the file now
-	help("modules")
+	pydoc.help("modules")
 	sys.stdout.close()
 	# reset stdout
 	sys.stdout = out
@@ -97,7 +98,7 @@ def create_output():  # saves the output of help('modules') to text file
 
 def create_handle():  # creates a handle to work with the contents of the file
 	try:
-		the_file = open("help_modules.txt", 'r')
+		the_file = open(make_file, 'r')
 		global handle
 		handle = the_file.readlines()
 		the_file.close()
@@ -107,7 +108,7 @@ def create_handle():  # creates a handle to work with the contents of the file
 
 def delete_unused():
 	try:  # trims anything not a module name
-		new_file = open("lib_modules.txt", 'w')
+		new_file = open("lib_modules.txt", 'w+')
 
 		for line in handle:
 			if line.startswith("\n"):
@@ -116,6 +117,8 @@ def delete_unused():
 				line.replace("Please", "")
 			elif line.startswith("Enter"):
 				line.replace("Enter", "")
+			elif line.startswith("DEBUG"):
+				line.replace("DEBUG", "")
 			elif line.startswith("for"):
 				line.replace("for", "")
 			else:
@@ -129,7 +132,7 @@ def delete_unused():
 
 def sort_list():  # sorts the list into alphabetical order
 	sort_in = open("lib_modules.txt", 'r')
-	sort_out = open("mod_list.txt", 'w')
+	sort_out = open("mod_list.txt", 'w+')
 
 	results = []
 	sortfile = sort_in.readlines()

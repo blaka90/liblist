@@ -57,6 +57,7 @@ Tix
 Tkconstants
 Tkdnd
 Tkinter
+Unreleased!
 UserDict
 UserList
 UserString
@@ -67,7 +68,6 @@ animation
 antigravity
 anydbm
 appJar
-appdirs
 apsw
 argcomplete
 argh
@@ -100,8 +100,6 @@ bz2
 cPickle
 cProfile
 cStringIO
-cachecontrol
-caches
 cairo
 calendar
 capstone
@@ -148,10 +146,8 @@ difflib
 dircache
 dis
 distlib
-distro
 distutils
 dns
-docopt
 doctest
 drv_libxml2
 dsextras
@@ -361,7 +357,6 @@ sndhdr
 socket
 speedtest
 speedtest_cli
-spoofmac
 spwd
 sqlite3
 sre
@@ -406,7 +401,6 @@ tkFileDialog
 tkFont
 tkMessageBox
 tkSimpleDialog
-tld
 toaiff
 token
 tokenize

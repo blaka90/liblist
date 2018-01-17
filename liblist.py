@@ -5,7 +5,6 @@ __author__ = "Blaka90"
 
 import importlib
 import __builtin__
-import os
 import sys
 from prettytable import PrettyTable
 from time import sleep
@@ -19,11 +18,7 @@ import warnings
 import getpass
 
 
-"""-----------------ONLY WORKING ON MAC OS X SO FAR----------------"""
-
-
 '''
-	tested on linux and got error- test on linux and windows for correct paths
 	start making compatible with python3.5 as joining the dark side
 	look for cleaner solution for mod_dict_p1 & 2
 '''
@@ -38,20 +33,25 @@ args = parser.parse_args()
 
 
 # below was the old way, been optimized since, just keeping incase
+sc = threading.Thread(target=nl.start_create())
 ui = threading.Thread(target=nl.printing)
 ui2 = threading.Thread(target=nl.printing_output)
-# sc = threading.Thread(target=nl.start_create)
 
 
 platform = platform.uname()
 user = getpass.getuser()
+os_sys = sys.platform
 
 
 # added since i am trying to make more universal
-try:
+if "darwin" in os_sys:
 	user_path = open("/Users/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
-except IOError as e:
-	user_path = open(os.environ['HOME'] + "/mod_list.txt", "r")
+elif "linux" in os_sys:
+	user_path = open("/home/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
+else:
+	print "Wrong directory or your operating system is not compatible..."
+	sys.exit(69)
+
 path_mod = user_path.readlines()
 user_path.close()
 
@@ -103,7 +103,7 @@ def library_list():
 	table1 = PrettyTable(["Index", "Package", "index", "package"])  # initiate prettytable
 	table1.sortby = "Index"
 
-	for (key1,value1), (key2,value2) in zip(mod_dict_p1.iteritems(), mod_dict_p2.iteritems()):
+	for (key1, value1), (key2, value2) in zip(mod_dict_p1.iteritems(), mod_dict_p2.iteritems()):
 		table1.add_row(["%s" % key1, "%s" % value1, "%s" % key2, "%s" % value2])
 
 	table1.sortby = "Package"
@@ -251,6 +251,7 @@ def main():
 			sys.exit(0)
 	else:
 		parser.print_help()
+
 
 if __name__ == "__main__":
 	main()
