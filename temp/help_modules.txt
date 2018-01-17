@@ -1,6 +1,7 @@
 
 Please wait a moment while I gather a list of all available modules...
 
+<<<<<<< HEAD
 BaseHTTPServer      appdirs             hashlib             resource
 Bastion             apsw                heapq               retrying
 BeautifulSoup       argcomplete         hmac                rexec
@@ -134,3 +135,5 @@ appJar              gzip                requests            zope
 Enter any module name to get more help.  Or, type "modules spam" to search
 for modules whose descriptions contain the word "spam".
 
+=======
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433

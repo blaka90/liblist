@@ -46,6 +46,12 @@ PngImagePlugin
 PyQt4
 PyQt5
 Queue
+<<<<<<< HEAD
+=======
+SOAPpy
+ScreenSaver
+ScriptingBridge
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 ScrolledText
 SimpleDialog
 SimpleHTTPServer
@@ -92,8 +98,11 @@ bisect
 blessings
 bluetooth
 bottlenose
+<<<<<<< HEAD
 bpdb
 bpython
+=======
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 bs4
 bsddb
 bz2
@@ -123,12 +132,17 @@ colorsys
 commands
 compileall
 compiler
+<<<<<<< HEAD
 constantly
+=======
+construct
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 contextlib
 contrib
 cookielib
 copy
 copy_reg
+cross_bdist_wininst
 crypt
 cryptography
 cssselect
@@ -136,21 +150,30 @@ cssutils
 csv
 ctypes
 curses
+<<<<<<< HEAD
 curtsies
+=======
+cythonmagic
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 datetime
-dateutil
 dbhash
 dbm
 dbus
 debconf
 decimal
+defusedxml
 difflib
 dircache
 dis
 distlib
 distro
 distutils
+<<<<<<< HEAD
 dns
+=======
+django
+dnet
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 docopt
 doctest
 drv_libxml2
@@ -165,14 +188,25 @@ encodings
 encutils
 ensurepip
 enum
+epub
 errno
 exampleproj
 exceptions
+<<<<<<< HEAD
 fasteners
+=======
+fabric
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 fcntl
 feedparser
 filecmp
 fileinput
+<<<<<<< HEAD
+=======
+findertools
+first
+flask
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 fnmatch
 formatter
 fpformat
@@ -208,6 +242,7 @@ httplib
 hyperlink
 idna
 ihooks
+image
 imaplib
 imghdr
 imp
@@ -218,10 +253,17 @@ inspect
 io
 ipaddress
 itertools
+<<<<<<< HEAD
+=======
+itsdangerous
+jdcal
+jinja2
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 json
 keyring
 keyrings
 keyword
+lib
 lib2to3
 liblist
 liblist_newlist
@@ -231,7 +273,6 @@ libxml2mod
 linecache
 linuxaudiodev
 locale
-lockfile
 logging
 lsb_release
 lxml
@@ -246,6 +287,7 @@ marshal
 math
 md5
 mechanize
+meld3
 mhlib
 mimetools
 mimetypes
@@ -257,17 +299,26 @@ msgpack
 multifile
 multiprocessing
 mutex
+<<<<<<< HEAD
 ndiff
+=======
+netaddr
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 netifaces
 netrc
 new
 nis
 nntplib
 ntpath
+ntplib
 nturl2path
 numbers
+<<<<<<< HEAD
 olefile
 ometa
+=======
+objc
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 opcode
 operator
 optparse
@@ -282,6 +333,11 @@ parser
 parsley
 pathtools
 pdb
+<<<<<<< HEAD
+=======
+pdfminer
+pexpect
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 pickle
 pickletools
 pip
@@ -312,11 +368,24 @@ pycparser
 pydoc
 pydoc_data
 pyexpat
+<<<<<<< HEAD
 pygments
 pygtk
 pygtkcompat
 pyparsing
 pysqlcipher
+=======
+pygame
+pygeocoder
+pygeoip
+pygeolib
+pyglet
+pymsgbox
+pyscreeze
+pytweening
+pytz
+queuelib
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 quopri
 random
 re
@@ -340,6 +409,7 @@ selenium
 serial
 service_identity
 sets
+setup
 setuptools
 sgmllib
 sha
@@ -362,7 +432,11 @@ socket
 speedtest
 speedtest_cli
 spoofmac
+<<<<<<< HEAD
 spwd
+=======
+spotify
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 sqlite3
 sre
 sre_compile
@@ -431,19 +505,35 @@ user
 util
 uu
 uuid
+<<<<<<< HEAD
+=======
+vboxapi
+vboxshell
+videoreader
+virtualenv
+virtualenv_support
+w3lib
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 warnings
 watchdog
 wave
 wcwidth
 weakref
 webbrowser
+<<<<<<< HEAD
 webencodings
 webob
+=======
+werkzeug
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 wget
-wheel
 whichdb
 wsgiref
+<<<<<<< HEAD
 xdg
+=======
+wstools
+>>>>>>> 512ba6fdd88b6fffb4462b49d1b0e5bc2370f433
 xdrlib
 xml
 xmllib
