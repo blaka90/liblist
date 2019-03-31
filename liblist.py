@@ -1,8 +1,6 @@
 #! /usr/bin/env python -W ignore::DeprecationWarning
 # -*- coding: utf-8 -*-
 
-__author__ = "Blaka90"
-
 import importlib
 import __builtin__
 import sys
@@ -23,6 +21,7 @@ import getpass
 	look for cleaner solution for mod_dict_p1 & 2
 '''
 
+__author__ = "blaka90"
 
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
@@ -49,7 +48,7 @@ if "darwin" in os_sys:
 elif "linux" in os_sys:
 	user_path = open("/home/" + user + "/Documents/python/liblist/temp/mod_list.txt", "r")
 else:
-	print "Wrong directory or your operating system is not compatible..."
+	print("Wrong directory or your operating system is not compatible...")
 	sys.exit(69)
 
 path_mod = user_path.readlines()
@@ -97,9 +96,9 @@ def library_list():
 	global lib
 	global lib2
 	global ans
-	print "--------------------------------------------------"
-	print "Here are the available library's:"
-	print "--------------------------------------------------"
+	print("--------------------------------------------------")
+	print("Here are the available library's:")
+	print("--------------------------------------------------")
 	table1 = PrettyTable(["Index", "Package", "index", "package"])  # initiate prettytable
 	table1.sortby = "Index"
 
@@ -108,10 +107,10 @@ def library_list():
 
 	table1.sortby = "Package"
 
-	print table1
-	print "--------------------------------------------------"
-	ans = raw_input("what library would you like to look at?: ")
-	print "--------------------------------------------------"
+	print(table1)
+	print("--------------------------------------------------")
+	ans = input("what library would you like to look at?: ")
+	print("--------------------------------------------------")
 	if ans.isdigit():
 		if ans in mod_dict_p1.keys():
 			check_dict_1()
@@ -124,7 +123,7 @@ def library_list():
 	elif ans.isalpha():
 		check_word()
 	else:
-		print "not valid choice"
+		print("not valid choice")
 
 
 def check_dict_1():
@@ -132,12 +131,12 @@ def check_dict_1():
 			lib = mod_dict_p1[ans]  # check if input is in module dictionary
 			lib = lib.replace("\n", "")
 			# ^get rid of all newlines so only actual module name is checked
-			print "You have chosen to look at %s" % lib
-			print "--------------------------------------------------"
+			print("You have chosen to look at %s" % lib)
+			print("--------------------------------------------------")
 			sleep(1)
 			check_import(lib)
 		except KeyError:
-			print "Please choose a valid number associating to a library"
+			print("Please choose a valid number associating to a library")
 			sleep(3)  # ^ error checking for invalid input
 			library_list()
 
@@ -147,12 +146,12 @@ def check_dict_2():
 			lib2 = mod_dict_p2[ans]
 			lib2 = lib2.replace("\n", "")
 			# ^get rid of all newlines so only actual module name is checked
-			print "You have chosen to look at %s" % lib2
-			print "--------------------------------------------------"
+			print("You have chosen to look at %s" % lib2)
+			print("--------------------------------------------------")
 			sleep(1)
 			check_import(lib2)
 		except KeyError:
-			print "Please choose a valid number associating to a library"
+			print("Please choose a valid number associating to a library")
 			sleep(3)  # ^ error checking for invalid input
 			library_list()
 			# print repr(lib)   - shows raw string literal
@@ -162,20 +161,20 @@ def check_word():
 	lib3 = ans
 	lib3 = lib3.replace("\n", "")
 	# ^get rid of all newlines so only actual module name is checked
-	print "You have chosen to look at %s" % lib3
-	print "--------------------------------------------------"
+	print("You have chosen to look at %s" % lib3)
+	print("--------------------------------------------------")
 	sleep(1)
 	check_import(lib3)
 
 
-def check_import(lib):
+def check_import(clib):
 	try:
 		global module
-		module = __builtin__.__import__(lib) or importlib.import_module(lib)
+		module = __builtin__.__import__(clib) or importlib.import_module(clib)
 
 	# try importing module
 	except ImportError:
-		print "Library does not exist: check your spelling or make sure library is installed"
+		print("Library does not exist: check your spelling or make sure library is installed")
 		# module not in library or mispelled/ out of range
 		sleep(4)
 		library_list()
@@ -186,14 +185,14 @@ def print_output():
 	global docs
 	contents = dir(module)  # handle for the module contents
 	for c in contents:  # iterate over contents of module showing whats inside
-		print c
+		print(c)
 
-	print "--------------------------------------------------"
-	print "Want more information on module contents?"
-	print "--------------------------------------------------"
+	print("--------------------------------------------------")
+	print("Want more information on module contents?")
+	print("--------------------------------------------------")
 	try:
-		expand = raw_input(">(y/n)").lower()
-		print "\t"
+		expand = input(">(y/n)").lower()
+		print("\t")
 		if expand == "y":
 			for name,  mod in inspect.getmembers(module):
 				if name == '__builtins__':
@@ -201,21 +200,21 @@ def print_output():
 				elif name == "__doc__":
 					docs = name + " : " + mod
 					continue
-				print '%s :' % name, mod
-			print "\t"
-			print docs
-			print "\t"
-			print "/\\" * 40
-			print "\t"
+				print('%s :' % name, mod)
+			print("\t")
+			print(docs)
+			print("\t")
+			print("/\\" * 40)
+			print("\t")
 		else:
-			print "\t"
-			print "/\\" * 40
-			print "\t"
+			print("\t")
+			print("/\\" * 40)
+			print("\t")
 			pass
 	except TypeError:
-		print "\t"
-		print "** __docs__ is unavailable with this package **"
-		print "\t"
+		print("\t")
+		print("** __docs__ is unavailable with this package **")
+		print("\t")
 		sleep(3)
 
 
@@ -225,17 +224,17 @@ def main():
 		table_sort()
 		while repeat != "n":
 			library_list()
-			print "--------------------------------------------------"
-			print "would you like to look at another library?"
-			print "--------------------------------------------------"
-			repeat = raw_input(">(y/n) ").lower()
+			print("--------------------------------------------------")
+			print("would you like to look at another library?")
+			print("--------------------------------------------------")
+			repeat = input(">(y/n) ").lower()
 		else:
 			sys.exit(0)
 	elif args.q == "empty":
 		nl.start_create()
-		print "-_-" * 26
-		print " " * 35 + "LIBLIST"
-		print "_-_" * 26 + "\n"
+		print("-_-" * 26)
+		print(" " * 35 + "LIBLIST")
+		print("_-_" * 26 + "\n")
 		ui.start()
 		ui.join()
 		ui2.start()
@@ -243,10 +242,10 @@ def main():
 		table_sort()
 		while repeat != "n":
 			library_list()
-			print "--------------------------------------------------"
-			print "would you like to look at another library?"
-			print "--------------------------------------------------"
-			repeat = raw_input(">(y/n) ").lower()
+			print("--------------------------------------------------")
+			print("would you like to look at another library?")
+			print("--------------------------------------------------")
+			repeat = input(">(y/n) ").lower()
 		else:
 			sys.exit(0)
 	else:

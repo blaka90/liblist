@@ -25,15 +25,15 @@ os_sys = sys.platform
 
 
 # added since i am trying to make more universal
-if "darwin" in os_sys:
-	if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):# just because its my script
+if "darwin" in os_sys:  # just because its my script
+	if os.path.isfile("/Users/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
 		os.chdir("/Users/" + user + "/Documents/python/liblist/temp/")  # and that's where it lives on my machine
 elif "linux" in os_sys:
 	# delete this if statement if files do not exit yet or it will fail here(any point in having it anyway?)
 	if os.path.isfile("/home/" + user + "/Documents/python/liblist/temp/help_modules.txt"):
 		os.chdir("/home/" + user + "/Documents/python/liblist/temp/")
 else:
-	print "Wrong directory or your operating system is not compatible..."
+	print("Wrong directory or your operating system is not compatible...")
 	sleep(2)
 	sys.exit(10)
 
@@ -42,15 +42,14 @@ make_file = "help_modules.txt"  # initial output file for the module list
 
 
 # actually slows down the program but just wanted some visual appeal
-widgets = ['Preparing files: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
-			' ', ' ', SimpleProgress()]  # see docs for other options
+# see docs for other options
+widgets = ['Preparing files: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'), ' ', ' ', SimpleProgress()]  
 
-widgets2 = ['Creating Output: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'),
-			' ', ' ', SimpleProgress()]  # see docs for other options
+widgets2 = ['Creating Output: ', Percentage(), ' ', Bar(marker='0', left='[', right=']'), ' ', ' ', SimpleProgress()]
 
 
 def printing():  # just for cosmetics
-		print "...creating library list..."
+		print("...creating library list...")
 		pbar = ProgressBar(widgets=widgets, maxval=100)
 		pbar.start()
 
@@ -58,7 +57,7 @@ def printing():  # just for cosmetics
 			pbar.update(i)  # this adds the progress at each iteration
 			sleep(1)
 		pbar.finish()
-		print
+		print()
 
 
 def printing_output():
@@ -69,7 +68,7 @@ def printing_output():
 			pbar2.update(i)  # this adds the progress at each iteration
 			sleep(1)
 		pbar2.finish()
-		print
+		print()
 
 
 # below is just an alternative/test
@@ -103,7 +102,7 @@ def create_handle():  # creates a handle to work with the contents of the file
 		handle = the_file.readlines()
 		the_file.close()
 	except ImportError:
-		print "can't open file"
+		print("can't open file")
 
 
 def delete_unused():
@@ -126,7 +125,7 @@ def delete_unused():
 		# removes anything not a module name and writes it to a new file
 		new_file.close()
 	except ImportError:
-		print "couldn't find file"
+		print("couldn't find file")
 	sort_list()
 
 
